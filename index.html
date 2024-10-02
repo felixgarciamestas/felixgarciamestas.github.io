@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Arturo Garcia Mestas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Video de fondo -->
+        <video id="background-video" autoplay muted loop>
+            <source src="a.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+
+        <div class="header-content">
+            <div class="header-text">
+                <h3>
+                    <i class="fas fa-star animated-icon"></i> 
+                    Felix Arturo Garcia Mestas - Programador
+                     
+                </h3>
+                
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#about" class="tab-link active" data-tab="about"><i class="fas fa-user"></i> Sobre Mí</a></li>
+                <li><a href="#skills" class="tab-link" data-tab="skills"><i class="fas fa-code"></i> Habilidades</a></li>
+            
+                <li><a href="#contact" class="tab-link" data-tab="contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="tab-content active">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>Sobre Mí</h2>
+                    
+                    
+
+                    <p>Hola, soy Félix y soy programador y diseñador de software. Soy un apasionado de la tecnología y siempre estoy aprendiendo nuevas habilidades para mantenerme al día con las últimas tendencias y herramientas. Mi enfoque es combinar creatividad y técnica para desarrollar soluciones innovadoras y eficaces.</p>
+                </div>
+            
+            </div>
+            <h2>Experiencia</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <i class="fas fa-project-diagram timeline-icon"></i>
+                    <div class="timeline-content">
+                       
+                        <h3><li><i class="fas fa-university"></i> TECSUP</li></h3>
+                        <p>2020 - Diseño y manteniminto de la pagina de Oracle Perú</p>
+                        <h3><li><i class="fas fa-briefcase"></i></i> Oracle Perú S.A.C.</li></h3>
+                        <p>2023 - Pasantias - Diseño y mantenimiento de la pagina</p>
+                    </div>
+                </div>
+            </div>
+
+        
+        </section>
+        <section id="skills" class="tab-content">
+            <div class="skills-container" style="display: flex; justify-content: space-between;">
+                
+                <!-- Columna de habilidades -->
+                <div class="skills-text" style="flex: 1; margin-right: 20px;">
+                    <h2>Habilidades</h2>
+                    <ul class="skills-list">
+                        <li data-video="web.mp4"><i class="fas fa-laptop-code"></i> Web (HTML, CSS)</li>
+                        <li data-video="js.mp4"><i class="fas fa-code"></i> JavaScript (Node, Next, Angular)</li>
+                        <li data-video="app.mp4"><i class="fas fa-mobile-alt"></i> Desarrollo de Apps multiplataforma</li>
+                        <li data-video="game.mp4"><i class="fas fa-brain"></i> JAVA, Python, C#, VBScript</li>
+                        <li data-video="ubun.mp4"><i class="fab fa-linux"></i> Linux</li>
+                        <li data-video="exel.mp4"><i class="fas fa-file-excel"></i> Excel (Macros, Funciones)</li>
+                        
+                        <li data-video="sql.mp4"><i class="fas fa-database"></i> Bases de datos (MongoDB, PostgreSQL, MySQL, SQLite)</li>
+                        <li data-video="docker.mp4"><i class="fab fa-docker"></i> Docker</li>
+                    </ul>
+                </div>
+                
+                <!-- Columna de demostración -->
+                <div class="skills-video" style="flex: 1;">
+                    <h2></h2>
+                    <ul>
+                        <video id="skill-video" muted autoplay loop style="width: 100%;">
+                            <source id="video-source" src="web.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="contact" class="tab-content">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: mzpro123@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Teléfono: 918238309</p>
+                <p><i class="fas fa-map-marker-alt"></i> Arequipa, Perú</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 - Perú.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

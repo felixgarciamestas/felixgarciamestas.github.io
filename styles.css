@@ -1,0 +1,242 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ebeaea; /* Color claro para texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #1a1a1a; /* Fondo oscuro */
+}
+
+/* Estructura del header */
+header {
+    position: relative;
+    height: 100%; /* El header ocupará toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el header */
+    z-index: -1; /* Envía el video al fondo */
+}
+
+.header-content {
+    position: relative;
+    margin-left: 3%;
+    z-index: 1; /* El contenido estará encima del video */
+    color: #e74c3c; /* Texto en rojo */
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Estilos del ícono animado */
+.animated-icon {
+    margin-right: 1px;
+    font-size: 1.5rem;
+    color: #e74c3c; /* Rojo para el ícono animado */
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo más oscuro para el menú */
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    flex: 1 0 20%;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #ebeaea; /* Texto blanco */
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav ul li a:hover, .tab-link.active {
+    background-color: #e74c3c; /* Fondo rojo al pasar el cursor */
+    transform: scale(0.8);
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 2% 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tab-content {
+    display: none;
+    padding: 2% 4%;
+    border-radius: 8px;
+    background-color: #000000; /* Fondo oscuro para el contenido */
+    box-shadow: 0 0 15px rgba(176, 39, 24, 0.4); /* Sombra roja */
+    margin-bottom: 10%;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    color: #e74c3c; /* Rojo para los títulos */
+    font-size: 1.8rem;
+}
+
+/* Estilos para la línea de tiempo */
+.timeline {
+    margin: 20px 0;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    padding-left: 60px;
+    border-left: 2px solid #e74c3c; /* Línea roja en la línea de tiempo */
+    position: relative;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: #e74c3c; /* Íconos rojos en la línea de tiempo */
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ebeaea; /* Texto claro */
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    background-color: #000000; /* Fondo negro */
+    color: #ebeaea; /* Texto claro */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        flex: 1 0 50%;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .about-image img {
+        max-width: 100px; /* Ajusta el tamaño de la imagen */
+        border-radius: 10px;
+    }
+}
+
+/* Habilidades y demostración en dos columnas */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-text {
+    width: 45%;
+}
+
+.skills-list li {
+    border: 2px solid #e74c3c; /* Borde rojo para indicar que es interactivo */
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    color: #ebeaea; /* Texto claro */
+}
+
+.skills-list li:hover {
+    border-color: #e74c3c; /* Mantener el borde rojo */
+    background-color: #1a1a1a; /* Fondo oscuro al pasar el cursor */
+    color: #ebeaea;
+}
+
+.skills-video {
+    width: 45%;
+    display: flex;
+    flex-direction: column; /* Ajuste para alinear verticalmente */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    justify-content: flex-start; /* Alinear elementos al principio del contenedor */
+}
+
+
+#skill-video {
+    width: 100%;
+    height: auto;
+}
